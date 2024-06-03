@@ -1,6 +1,7 @@
 import cv2
 import random
 
+# lista zdjęć
 images = ["landscape.png", "doggos.jpeg"]
 
 for img in images:
@@ -16,5 +17,6 @@ for img in images:
 
     # folder docelowy
     path = f'Pictures/'
+
     # zapisywanie
     cv2.imwrite(f"{path}{img[0:img.index('.')]}_Gaussian{img[img.index('.'):]}", Gaussian)
