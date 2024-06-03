@@ -1,15 +1,17 @@
 import cv2
 import random
 
-images = ["landscape.png"]
+images = ["landscape.png", "doggos.jpeg"]
 
 image = cv2.imread("landscape.png")
 
 for img in images:
     print(img[0:img.index('.')], img[img.index('.'):])
-    image = cv2.imread(f'{img}')
+    image = cv2.imread(f'C://Users/olafk/PycharmProjects/AutoGaussianBlur/{img}')
+    # print(image.shape)
+
     # losowanie rozmycia
-    rand = random.randrange(3, 16, 1)
+    rand = random.randrange(3, 21, 2)
     print(rand)
 
     # definicja filtrów
