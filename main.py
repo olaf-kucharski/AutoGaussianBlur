@@ -16,4 +16,4 @@ for img in images:
     Gaussian = cv2.GaussianBlur(image, (rand, rand), 0)
 
     # zapisywanie
-    cv2.imwrite(f"{img[0:img.index('.')]}_Gaussian{rand}{img[img.index('.'):]}", Gaussian)
+    cv2.imwrite(f"{img[0:img.index('.')]}_Gaussian{img[img.index('.'):]}", Gaussian)
