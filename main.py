@@ -1,6 +1,5 @@
 import cv2
 import random
-import os
 
 images = ["landscape.png", "doggos.jpeg"]
 
