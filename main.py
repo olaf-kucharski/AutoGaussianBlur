@@ -18,4 +18,5 @@ for img in os.listdir('Pictures'):
         path = f'Zgaussowane/'
 
         # zapisywanie
-        cv2.imwrite(f"{path}{img[0:img.index('.')]}_Gaussian{img[img.index('.'):]}", Gaussian)
+        # cv2.imwrite(f"{path}{img[0:img.index('.')]}_Gaussian{img[img.index('.'):]}", Gaussian)
+        cv2.imwrite(f"{path}{img}", Gaussian)
