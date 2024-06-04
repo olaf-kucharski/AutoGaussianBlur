@@ -3,7 +3,7 @@ import random
 import os
 
 for img in os.listdir('Pictures'):
-    with open(os.path.join('Pictures', img)) as f:
+    with open(f'Pictures/{img}') as f:
         print(f"{img[0:img.index('.')]}{img[img.index('.'):]}")
         image = cv2.imread(f'Pictures/{img}')
 
