@@ -2,10 +2,10 @@ import cv2
 import random
 import os
 
-for img in os.listdir('Pictures'):
-    with open(f'Pictures/{img}') as f:
+for img in os.listdir('New'):
+    with open(f'New/{img}') as f:
         print(f"{img[0:img.index('.')]}{img[img.index('.'):]}")
-        image = cv2.imread(f'Pictures/{img}')
+        image = cv2.imread(f'New/{img}')
 
         height, width, _ = image.shape
         x_start = (width - 256) // 2
@@ -14,12 +14,17 @@ for img in os.listdir('Pictures'):
 
         cv2.imwrite(f'256X/{img}', cropped_image)
 
+for img in os.listdir('256X'):
+    with open(f'256X/{img}') as f:
+        print(f"{img[0:img.index('.')]}{img[img.index('.'):]}")
+        image = cv2.imread(f'256X/{img}')
+
         # losowanie rozmycia
         rand = random.randrange(3, 16, 2)
         print(rand)
 
         # definicja filtrów
-        Gaussian = cv2.GaussianBlur(cropped_image, (rand, rand), 0)
+        Gaussian = cv2.GaussianBlur(image, (rand, rand), 0)
 
         # folder docelowy
         path = f'Zgaussowane/'
